@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Prism.StoreApps.Extensions.UI.Views.DefaultSplashScreenPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+	<Grid x:Name="gg">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="180" />
+		</Grid.RowDefinitions>
+
+		<Canvas>
+			<!--Source="Assets/SplashScreen.png"-->
+			<Image x:Name="extendedSplashImage"  />
+
+		</Canvas>
+
+		<ProgressRing x:Name="pr" Grid.Row="1" IsActive="True" />
+	</Grid>
+</Page>
