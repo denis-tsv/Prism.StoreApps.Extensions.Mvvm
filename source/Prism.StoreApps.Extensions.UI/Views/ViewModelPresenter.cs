@@ -3,7 +3,7 @@ using System.Diagnostics;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Microsoft.Practices.ServiceLocation;
-using Prism.StoreApps.Extensions.UI.Interfaces;
+using Prism.StoreApps.Extensions.UI.Resolvers.Interfaces;
 
 namespace Prism.StoreApps.Extensions.UI.Views
 {

@@ -2,11 +2,11 @@
 using Windows.UI.Xaml;
 using Microsoft.Practices.Unity;
 using Prism.StoreApps.Extensions.UI.ChildViewStrategies;
-using Prism.StoreApps.Extensions.UI.Interfaces;
+using Prism.StoreApps.Extensions.UI.Resolvers.Interfaces;
 using Prism.StoreApps.Extensions.ViewModel.Interfaces;
 using Prism.StoreApps.Extensions.ViewModel.ViewModels.Childs.Interfaces;
 
-namespace Prism.StoreApps.Extensions.UI
+namespace Prism.StoreApps.Extensions.UI.Managers
 {
 	public class ChildViewModelManager : IChildViewModelManager
 	{

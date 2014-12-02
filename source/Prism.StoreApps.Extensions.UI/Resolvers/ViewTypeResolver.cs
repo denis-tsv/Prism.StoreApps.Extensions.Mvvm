@@ -1,17 +1,17 @@
 ﻿using System;
 using Windows.UI.Xaml;
-using Prism.StoreApps.Extensions.UI.Interfaces;
+using Prism.StoreApps.Extensions.UI.Resolvers.Interfaces;
 
-namespace Prism.StoreApps.Extensions.UI.DefaultImplementation
+namespace Prism.StoreApps.Extensions.UI.Resolvers
 {
-	public class GeneralViewTypeResolver : IViewTypeResolver
+	public class ViewTypeResolver : IViewTypeResolver
 	{
 		public string ViewsAssembly { get; set; }
 		public string ViewsNamespace { get; set; }
 		public string ViewModelsAssembly { get; set; }
 		public string ViewModelsNamespace { get; set; }
 
-		public GeneralViewTypeResolver()
+		public ViewTypeResolver()
 		{
 			var app = Application.Current as AstroSoftApp;
 			

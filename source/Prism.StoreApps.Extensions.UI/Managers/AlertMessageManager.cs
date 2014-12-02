@@ -6,9 +6,9 @@ using Prism.StoreApps.Extensions.UI.Strings;
 using Prism.StoreApps.Extensions.ViewModel.Interfaces;
 using Prism.StoreApps.Extensions.ViewModel.ViewModels.Childs;
 
-namespace Prism.StoreApps.Extensions.UI.DefaultImplementation
+namespace Prism.StoreApps.Extensions.UI.Managers
 {
-	public class DefaultAlertMessageManager : IAlertMessageManager
+	public class AlertMessageManager : IAlertMessageManager
 	{
 		private static bool _isShowing;
 

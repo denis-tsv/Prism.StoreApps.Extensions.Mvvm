@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Prism.StoreApps.Extensions.UI.Interfaces
+namespace Prism.StoreApps.Extensions.UI.Resolvers.Interfaces
 {
 	public interface IViewTypeResolver
 	{

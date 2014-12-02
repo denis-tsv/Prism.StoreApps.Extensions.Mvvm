@@ -1,15 +1,15 @@
 ﻿using System;
 using Windows.UI.Xaml;
-using Prism.StoreApps.Extensions.UI.Interfaces;
+using Prism.StoreApps.Extensions.UI.Resolvers.Interfaces;
 
-namespace Prism.StoreApps.Extensions.UI.DefaultImplementation
+namespace Prism.StoreApps.Extensions.UI.Resolvers
 {
-	public class DefaultFlyoutViewTypeResolver : IFlyoutViewTypeResolver
+	public class FlyoutViewTypeResolver : IFlyoutViewTypeResolver
 	{
 		public string ViewsAssembly { get; set; }
 		public string ViewsNamespace { get; set; }
 
-		public DefaultFlyoutViewTypeResolver()
+		public FlyoutViewTypeResolver()
 		{
 			var app = Application.Current as AstroSoftApp;
 

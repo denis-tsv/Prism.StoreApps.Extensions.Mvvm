@@ -22,8 +22,6 @@ using Microsoft.Practices.Unity;
 using Prism.StoreApps.Extensions.Common.Extensions;
 using Prism.StoreApps.Extensions.Modules;
 using Prism.StoreApps.Extensions.UI;
-using Prism.StoreApps.Extensions.UI.DefaultImplementation;
-using Prism.StoreApps.Extensions.UI.Interfaces;
 using Prism.StoreApps.Extensions.ViewModel.Interfaces;
 using Sample.Logic;
 using Sample.ViewModel;

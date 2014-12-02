@@ -125,7 +125,7 @@
     <Compile Include="Behaviors\CoreWindowPresenter.cs" />
     <Compile Include="Behaviors\DataContextPresenter.cs" />
     <Compile Include="Behaviors\PageBarsVisibilityBehavior.cs" />
-    <Compile Include="ChildViewModelManager.cs" />
+    <Compile Include="Managers\ChildViewModelManager.cs" />
     <Compile Include="ChildViewStrategies\FlyoutStrategy.cs" />
     <Compile Include="ChildViewStrategies\IChildViewStrategy.cs" />
     <Compile Include="ChildViewStrategies\PopupStrategy.cs" />
@@ -139,11 +139,11 @@
     <Compile Include="Converters\NotNullToBooleanConverter.cs" />
     <Compile Include="Converters\NotNullToVisibilityConverter.cs" />
     <Compile Include="Converters\StringFormatConverter.cs" />
-    <Compile Include="DefaultImplementation\DefaultAlertMessageManager.cs" />
-    <Compile Include="DefaultImplementation\DefaultFlyoutViewTypeResolver.cs" />
-    <Compile Include="DefaultImplementation\GeneralViewTypeResolver.cs" />
-    <Compile Include="Interfaces\IFlyoutViewTypeResolver.cs" />
-    <Compile Include="Interfaces\IViewTypeResolver.cs" />
+    <Compile Include="Managers\AlertMessageManager.cs" />
+    <Compile Include="Resolvers\FlyoutViewTypeResolver.cs" />
+    <Compile Include="Resolvers\ViewTypeResolver.cs" />
+    <Compile Include="Resolvers\Interfaces\IFlyoutViewTypeResolver.cs" />
+    <Compile Include="Resolvers\Interfaces\IViewTypeResolver.cs" />
     <Compile Include="MvvmAppBaseEx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings\en-US\ErrorStrings.cs">

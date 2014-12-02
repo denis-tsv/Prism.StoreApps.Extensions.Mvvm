@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Prism.StoreApps.Extensions.UI.DefaultImplementation;
+using Prism.StoreApps.Extensions.UI.Resolvers;
 using Prism.StoreApps.Extensions.UI.Views;
 using Prism.StoreApps.Extensions.ViewModel.ViewModels.Childs.Interfaces;
 
