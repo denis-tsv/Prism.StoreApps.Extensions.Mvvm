@@ -42,7 +42,7 @@ namespace Prism.StoreApps.Extensions.UI
 			RegisterBasicInstances();
 			ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(ResolveViewModelType);
 
-			await LoadModulesAsync();
+			await InitializeModulesAsync();
 		}
 
 		protected virtual void InitServiceLocator()
@@ -59,10 +59,10 @@ namespace Prism.StoreApps.Extensions.UI
 			Container.RegisterInstance(SessionStateService);
 		}
 
-		protected virtual async Task LoadModulesAsync()
+		protected virtual async Task InitializeModulesAsync()
 		{
             var moduleCatalog = CreateaModuleCatalog(Container);
-            await moduleCatalog.LoadAsync();
+            await moduleCatalog.InitializeAsync();
 		}
 
 		protected override object Resolve(Type type)

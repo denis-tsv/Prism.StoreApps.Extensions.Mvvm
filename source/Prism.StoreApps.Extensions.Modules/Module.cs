@@ -5,16 +5,14 @@ namespace Prism.StoreApps.Extensions.Modules
 {
 	public abstract class Module : IModule
 	{
-		public virtual async Task Initialize(IUnityContainer container)
+		public virtual async Task InitializeAsync(IUnityContainer container)
 		{
-			//
+			
 		}
 
-        public virtual void Load(IUnityContainer container)
+        public virtual void RegisterServices(IUnityContainer container)
 		{
-			//
+			
 		}
-
-		
 	}
 }

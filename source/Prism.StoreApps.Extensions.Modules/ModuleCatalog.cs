@@ -8,52 +8,47 @@ namespace Prism.StoreApps.Extensions.Modules
 {
 	public class ModuleCatalog
 	{
-		#region Fields
-
 		private readonly IUnityContainer _context;
 		private IList<IModule> _modules;
         private readonly List<Type> _moduleTypes = new List<Type>();
-
-		#endregion
-
-		#region .ctor
 
 		public ModuleCatalog(IUnityContainer context)
 		{
 			_context = context;
 		}
 
-		#endregion
-
 	    public void AddModule(Type moduleType)
 	    {
             _moduleTypes.Add(moduleType);
 	    }
 
-	    public async Task LoadAsync()
+        /// <summary>
+        /// Performs registering of services and initialization of modules in order of modules was added
+        /// </summary>
+        public async Task InitializeAsync()
 		{
 			_modules = CreateModules();
 
-			LoadModules();
+			RegisterModuleServices();
 
-			await InitializeModules();
+			await InitializeModulesAsync();
 		}
 
-		private void LoadModules()
+		private void RegisterModuleServices()
 		{
 			for(int i=0; i<_modules.Count; i++)
 			{
 			    IModule module = _modules[i];
-				module.Load(_context);
+				module.RegisterServices(_context);
 			}
 		}
 
-		private async Task InitializeModules()
+		private async Task InitializeModulesAsync()
 		{
             for(int i=0; i<_modules.Count; i++)
 			{
 			    IModule module = _modules[i];
-				await module.Initialize(_context);
+				await module.InitializeAsync(_context);
 			}
 		}
 

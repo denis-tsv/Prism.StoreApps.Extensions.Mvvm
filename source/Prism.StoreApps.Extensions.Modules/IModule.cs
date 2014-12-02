@@ -5,7 +5,7 @@ namespace Prism.StoreApps.Extensions.Modules
 {
 	public interface IModule
 	{
-		void Load(IUnityContainer container);
-		Task Initialize(IUnityContainer container);
+		void RegisterServices(IUnityContainer container);
+		Task InitializeAsync(IUnityContainer container);
 	}
 }
