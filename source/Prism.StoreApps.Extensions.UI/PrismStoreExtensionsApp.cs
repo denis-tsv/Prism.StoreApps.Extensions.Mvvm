@@ -16,7 +16,7 @@ using Prism.StoreApps.Extensions.ViewModel.ViewModels.Childs.Interfaces;
 
 namespace Prism.StoreApps.Extensions.UI
 {
-	public abstract class AstroSoftApp : MvvmAppBaseEx
+	public abstract class PrismStoreExtensionsApp : MvvmAppBaseEx
 	{
 		private IUnityContainer _container;
 		protected virtual IUnityContainer Container
@@ -31,7 +31,7 @@ namespace Prism.StoreApps.Extensions.UI
 
 	    protected abstract ModuleCatalog CreateaModuleCatalog(IUnityContainer container);
 
-		protected AstroSoftApp()
+		protected PrismStoreExtensionsApp()
 		{
 			ExtendedSplashScreenFactory = (splashscreen) => new DefaultSplashScreenPage(splashscreen);
 		}
@@ -100,7 +100,7 @@ namespace Prism.StoreApps.Extensions.UI
 			return new List<SettingsCommand>();
 		}
 
-		protected SettingsCommand AddSettingsFlyout<T>(string label)
+		protected SettingsCommand CreateSettingsFlyout<T>(string label)
 			where T : ISettingsFlyoutViewModel
 		{
 			return new SettingsCommand(Guid.NewGuid(), label, ShowSettingsFlyout<T>);

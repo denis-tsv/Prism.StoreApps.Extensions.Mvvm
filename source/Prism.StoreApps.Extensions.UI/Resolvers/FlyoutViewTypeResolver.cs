@@ -11,7 +11,7 @@ namespace Prism.StoreApps.Extensions.UI.Resolvers
 
 		public FlyoutViewTypeResolver()
 		{
-			var app = Application.Current as AstroSoftApp;
+			var app = Application.Current as PrismStoreExtensionsApp;
 
 			if (app != null)
 			{
@@ -24,22 +24,6 @@ namespace Prism.StoreApps.Extensions.UI.Resolvers
 		{
 			var viewFullName = String.Format("{0}.Flyouts.{1}Flyout , {2}", ViewsNamespace, token, ViewsAssembly);
 			return Type.GetType(viewFullName);
-		}
-	}
-
-	[AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
-	public sealed class FlyoutTokenAttribute : Attribute
-	{
-		private readonly string _token;
-
-		public FlyoutTokenAttribute(string token)
-		{
-			_token = token;
-		}
-
-		public string Token
-		{
-			get { return _token; }
 		}
 	}
 }

@@ -137,10 +137,28 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppModule.cs" />
+    <Compile Include="Childs\AddProductDialog.xaml.cs">
+      <DependentUpon>AddProductDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Flyouts\AddProductFlyout.xaml.cs">
+      <DependentUpon>AddProductFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\ErrorNotification.xaml.cs">
+      <DependentUpon>ErrorNotification.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regions\DetailsRegion.xaml.cs">
+      <DependentUpon>DetailsRegion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Regions\GridRegion.xaml.cs">
+      <DependentUpon>GridRegion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsFlyouts\AppSettingsFlyout.xaml.cs">
+      <DependentUpon>AppSettingsFlyout.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -188,11 +206,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Childs\AddProductDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Flyouts\AddProductFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notifications\ErrorNotification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Regions\DetailsRegion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Regions\GridRegion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsFlyouts\AppSettingsFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

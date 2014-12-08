@@ -104,6 +104,7 @@
     <Compile Include="..\..\GeneralAssemblyInfo.cs">
       <Link>Properties\GeneralAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="FlyoutTokenAttribute.cs" />
     <Compile Include="Interfaces\IAlertMessageManager.cs" />
     <Compile Include="Interfaces\IChildViewModelManager.cs" />
     <Compile Include="Managers\RoamingCredentialManager.cs" />

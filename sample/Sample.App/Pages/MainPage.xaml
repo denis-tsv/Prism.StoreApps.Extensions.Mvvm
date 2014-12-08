@@ -3,37 +3,22 @@
     x:Class="Sample.App.Pages.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Sample.App.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="using:Microsoft.Practices.Prism.StoreApps"
     xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:child="using:Prism.StoreApps.Extensions.UI.Views.Child"
+    xmlns:views="using:Prism.StoreApps.Extensions.UI.Views"
     mc:Ignorable="d"
     mvvm:ViewModelLocator.AutoWireViewModel="True">
 
-    <prism:VisualStateAwarePage.Resources>
-        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">MainPage</x:String>
-    </prism:VisualStateAwarePage.Resources>
-
-    <!--
-        This grid acts as a root panel for the page that defines two rows:
-        * Row 0 contains the back button and page title
-        * Row 1 contains the rest of the page layout
-    -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ChildrenTransitions>
-            <TransitionCollection>
-                <EntranceThemeTransition/>
-            </TransitionCollection>
-        </Grid.ChildrenTransitions>
+    <Grid Background="DarkSlateGray" >
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!-- Back button and page title -->
-        <Grid>
+        
+        <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
@@ -51,9 +36,44 @@
                        IsHitTestVisible="false" 
 					   Margin="0,0,30,40"
 					   Style="{StaticResource HeaderTextBlockStyle}" 
-			           Text="{StaticResource AppName}" 
+			           Text="Main Page" 
 					   TextWrapping="NoWrap" 
 					   VerticalAlignment="Bottom" />
         </Grid>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <views:ViewModelPresenter  ViewModel="{Binding GridRegionViewModel}" Grid.Column="0" Margin="120,0,0,0" />
+            
+            <views:ViewModelPresenter ViewModel="{Binding DetailsRegionViewModel}" Grid.Column="1" />
+            
+        </Grid>
     </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar IsOpen="True" >
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="Add" Label="Add" Command="{Binding GridRegionViewModel.AddProductFlyoutCommand}" child:FlyoutView.FlyoutToken="AddProduct" />
+                <AppBarButton Icon="Delete" Label="Delete" Command="{Binding GridRegionViewModel.DeleteProductCommand}" />
+                <AppBarButton Label="Refresh" Command="{Binding GridRegionViewModel.RefreshCommand}" >
+                    <AppBarButton.Icon>
+                        <SymbolIcon Symbol="Refresh" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar.PrimaryCommands>
+            
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Settings" Command="{Binding ShowSettingsFlyoutCommand}">
+                    <AppBarButton.Icon>
+                        <SymbolIcon Symbol="Setting" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+        
+    </Page.BottomAppBar>
 </prism:VisualStateAwarePage>

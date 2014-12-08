@@ -13,7 +13,7 @@ namespace Prism.StoreApps.Extensions.UI.Resolvers
 
 		public ViewTypeResolver()
 		{
-			var app = Application.Current as AstroSoftApp;
+			var app = Application.Current as PrismStoreExtensionsApp;
 			
 			if (app != null)
 			{

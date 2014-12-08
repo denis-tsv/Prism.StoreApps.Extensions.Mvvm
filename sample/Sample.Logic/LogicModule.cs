@@ -9,12 +9,12 @@ namespace Sample.Logic
     {
         public override void RegisterServices(IUnityContainer container)
         {
-            container.RegisterTypeAs<IRepository, Repository>(ResolvingMode.Singleton);
+            container.RegisterTypeAs<IRepository, DemoRepository>(ResolvingMode.Singleton);
         }
 
         public async override Task InitializeAsync(IUnityContainer container)
         {
-            await container.Resolve<IRepository>().LoadSomeDataIntoMemory();
+            await container.Resolve<IRepository>().LoadSomeDataIntoMemoryAsync();
         }
     }
 }

@@ -8,6 +8,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ApplicationSettings;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,7 @@ using Prism.StoreApps.Extensions.UI;
 using Prism.StoreApps.Extensions.ViewModel.Interfaces;
 using Sample.Logic;
 using Sample.ViewModel;
+using Sample.ViewModel.SettingsFlyouts;
 
 namespace Sample.App
 {
@@ -82,6 +84,15 @@ namespace Sample.App
             moduleCatalog.AddModule(typeof(AppModule));
 
             return moduleCatalog;
+        }
+
+        protected override IList<SettingsCommand> GetSettingsCommands()
+        {
+            var result = new List<SettingsCommand>();
+
+            result.Add(CreateSettingsFlyout<AppSettingsFlyoutViewModel>("Settings"));
+
+            return result;
         }
     }
 }

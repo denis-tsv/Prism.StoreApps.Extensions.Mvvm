@@ -119,7 +119,7 @@
     <Compile Include="..\..\GeneralAssemblyInfo.cs">
       <Link>Properties\GeneralAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="AstroSoftApp.cs" />
+    <Compile Include="PrismStoreExtensionsApp.cs" />
     <Compile Include="Behaviors\CollectionSynchronizerBehavior.cs" />
     <Compile Include="Behaviors\Composition.cs" />
     <Compile Include="Behaviors\CoreWindowPresenter.cs" />

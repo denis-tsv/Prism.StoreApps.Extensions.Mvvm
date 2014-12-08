@@ -102,6 +102,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\..\source\Prism.StoreApps.Extensions.Common\Prism.StoreApps.Extensions.Common.csproj">
+      <Project>{12E779D1-C257-4987-8A55-4CE1D6E526E6}</Project>
+      <Name>Prism.StoreApps.Extensions.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\source\Prism.StoreApps.Extensions.Modules\Prism.StoreApps.Extensions.Modules.csproj">
       <Project>{178F2EF2-478E-4C97-A895-2529538ADA85}</Project>
       <Name>Prism.StoreApps.Extensions.Modules</Name>
@@ -110,10 +114,25 @@
       <Project>{F980BC0F-B4F6-4038-B789-223BAD762C20}</Project>
       <Name>Prism.StoreApps.Extensions.ViewModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sample.Logic\Sample.Logic.csproj">
+      <Project>{E5A799D0-ADB4-46AF-8CC8-6FEA87039834}</Project>
+      <Name>Sample.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sample.Model\Sample.Model.csproj">
+      <Project>{4355A399-FE37-4672-AEBB-8C979AB427E3}</Project>
+      <Name>Sample.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Childs\AddProductDialogViewModel.cs" />
+    <Compile Include="Flyouts\AddProductFlyoutViewModel.cs" />
+    <Compile Include="FlyoutTokens.cs" />
+    <Compile Include="Notifications\ErrorNotificationViewModel.cs" />
     <Compile Include="Pages\MainPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regions\DetailsRegionViewModel.cs" />
+    <Compile Include="Regions\GridRegionViewModel.cs" />
+    <Compile Include="SettingsFlyouts\AppSettingsFlyoutViewModel.cs" />
     <Compile Include="ViewModelModule.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,10 +151,54 @@
     <Reference Include="Microsoft.Practices.Prism.StoreApps.Windows">
       <HintPath>..\..\packages\Prism.StoreApps.2.0.0\lib\windows8\Microsoft.Practices.Prism.StoreApps.Windows.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\win8\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\win8\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveUI, Version=6.2.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\reactiveui-core.6.2.1.1\lib\Win8\ReactiveUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Splat.1.5.1\lib\NetCore45\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-Core.2.2.5\lib\windows8\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-Interfaces.2.2.5\lib\windows8\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-Linq.2.2.5\lib\windows8\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-PlatformServices.2.2.5\lib\windows8\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-XAML.2.2.5\lib\windows8\System.Reactive.Windows.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.WindowsRuntime, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Rx-WinRT.2.2.5\lib\windows8\System.Reactive.WindowsRuntime.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
