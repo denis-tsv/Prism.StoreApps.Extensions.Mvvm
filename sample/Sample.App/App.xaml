@@ -5,4 +5,12 @@
     xmlns:local="using:Sample.App"
     xmlns:ui="using:Prism.StoreApps.Extensions.UI">
 
+    <Application.Resources>
+        <Style TargetType="ProgressRing" x:Key="SplashScreenProgressRingStyle">
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="100" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </Application.Resources>
+
 </ui:PrismStoreExtensionsApp>

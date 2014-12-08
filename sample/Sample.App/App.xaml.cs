@@ -46,11 +46,11 @@ namespace Sample.App
 
         protected async override Task OnLaunchApplication(LaunchActivatedEventArgs args)
         {
-            //if (args.PreviousExecutionState != ApplicationExecutionState.Running)
-            //{
-            //    // Here we would load the application's resources.
-            //    await Task.Delay(2000);
-            //}
+            if (args.PreviousExecutionState != ApplicationExecutionState.Running)
+            {
+                // Here we would load the application's resources.
+                await Task.Delay(4000);
+            }
 
             NavigationService.Navigate("Main");
         }
