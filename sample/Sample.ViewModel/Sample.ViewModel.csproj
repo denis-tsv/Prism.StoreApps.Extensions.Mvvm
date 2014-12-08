@@ -124,7 +124,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Childs\AddProductDialogViewModel.cs" />
+    <Compile Include="Childs\AddProductDialogViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Flyouts\AddProductFlyoutViewModel.cs" />
     <Compile Include="FlyoutTokens.cs" />
     <Compile Include="Notifications\ErrorNotificationViewModel.cs" />
