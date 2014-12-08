@@ -130,8 +130,12 @@
     <Compile Include="Notifications\ErrorNotificationViewModel.cs" />
     <Compile Include="Pages\MainPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Regions\DetailsRegionViewModel.cs" />
-    <Compile Include="Regions\GridRegionViewModel.cs" />
+    <Compile Include="Regions\DetailsRegionViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Regions\GridRegionViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="SettingsFlyouts\AppSettingsFlyoutViewModel.cs" />
     <Compile Include="ViewModelModule.cs" />
   </ItemGroup>
