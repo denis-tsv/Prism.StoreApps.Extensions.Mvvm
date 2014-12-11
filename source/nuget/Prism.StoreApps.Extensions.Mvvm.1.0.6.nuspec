@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>Prism.StoreApps.Extensions.Mvvm</id>
+        <version>1.0.6</version>
+        <authors>Denis Tsvettsih,Alexey Sosnin</authors>
+        <projectUrl>https://github.com/denis-tsv/Prism.StoreApps.Extensions.Mvvm</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This framework extends Prism.StoreApps with useful real-world featires. 
+  1. Displaying of settings flyouts, child views, notifications and flyouts views in MVVM style
+  2. CompositeUI via regions in ViewModelFirst style</description>
+        <tags>MVVM WinRT Metro ViewModel Prism Store Module CompositeIU Page Region SettingsFlyout Child Dialog Flyout</tags>
+        <dependencies>
+            <group targetFramework="Windows8.1">
+                <dependency id="Unity" version="3.5.1404.0" />
+                <dependency id="Prism.StoreApps" version="2.0.0" />
+                <dependency id="reactiveui" version="6.2.1.1" />
+                <dependency id="Prism.StoreApps.Extensions.Common" version="1.0.5" />
+                <dependency id="Prism.StoreApps.Extensions.Modules" version="1.0.5" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Views\Child\ChildView.xbf" target="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.UI\Views\Child\ChildView.xbf" />
+        <file src="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Views\Child\UpperRegionNotificationView.xbf" target="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.UI\Views\Child\UpperRegionNotificationView.xbf" />
+        <file src="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Views\DefaultSplashScreenPage.xbf" target="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.UI\Views\DefaultSplashScreenPage.xbf" />
+        <file src="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.UI.xr.xml" target="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.UI\Prism.StoreApps.Extensions.UI.xr.xml" />
+        <file src="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.UI.dll" target="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.UI.dll" />
+        <file src="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.UI.pri" target="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.UI.pri" />
+        <file src="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.ViewModel.dll" target="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.ViewModel.dll" />
+        <file src="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.ViewModel.pri" target="lib\netcore451\Prism.StoreApps.Extensions.Mvvm\Prism.StoreApps.Extensions.ViewModel.pri" />
+    </files>
+</package>
