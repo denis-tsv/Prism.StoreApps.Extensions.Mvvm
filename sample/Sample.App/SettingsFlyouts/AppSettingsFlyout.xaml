@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     IconSource="Assets/SmallLogo.png"
-    Title="AppSettingsFlyout"
+    Title="Settings"
     d:DesignWidth="346">
 
     <!-- This StackPanel acts as a root panel for vertical layout of the content sections -->
@@ -19,13 +19,17 @@
         <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
 
             <!-- Section 1 header -->
-            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Lorem ipsum" />
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="My Settings" />
 
             <!-- Section 1 body -->
             <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
                 <TextBlock.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Settings 1
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" Margin="0,0,0,25" TextWrapping="Wrap">
+                <TextBlock.Text>
+                    Setting 2
                 </TextBlock.Text>
             </TextBlock>
 
